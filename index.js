@@ -54,7 +54,7 @@ if(!note)return res.status(404).json({message:"Note not found"})
     }
 })
 //delete a note
-app.delete("/notes/:id",async (req,res)=>{
+app.delete("/notes/delete/:id",async (req,res)=>{
     try{
         const note=await Note.findByIdAndDelete(req.params.id)
 if(!note)return res.status(404).json({message:"Not able to delete"})
